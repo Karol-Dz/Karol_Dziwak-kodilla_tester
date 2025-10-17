@@ -3,29 +3,34 @@ public class Grades {
     private int size;
 
     public Grades() {
-        this.grades = new int[10];
-        this.size = 0;
+        grades = new int[10];
+        size = 0;
     }
     public void add(int value) {
         if (this.size == 10) {
             return;
         }
-        this.grades[this.size] = value;
-        this.size++;
+        grades[this.size] = value;
+        size++;
     }
-    public Integer getLastGradess() {
-        if (this.size == 0) {
-            return null;
-        }
-        return this.grades[this.size - 1];
+    public int getLastGrade() {
+        return grades[size - 1];
     }
-    public double averageRating() {
-        if (this.size == 0) {
-            return 0.0;
+    public double getAverage() {
+        double sum = 0;
+        for(int grade : grades) {
+            sum += grade;
         }
-        int suma = 0;
-        for (int i = 0; i < this.size; i++) {
-            suma += this.grades[i];
-        }
-        return (double) suma / this.size;
+        return sum / size;
+    }
+}
+class App {
+    public static void main(String[] args) {
+        Grades grades = new Grades ();
+        grades.add(4);
+        grades.add(3);
+        grades.add(5);
+        System.out.println(grades.getLastGrade());
+        System.out.println(grades.getAverage());
+    }
 }
