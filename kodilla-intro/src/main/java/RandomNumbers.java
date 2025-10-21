@@ -12,7 +12,7 @@ public class RandomNumbers {
             numbers.add(number);
             sum += number;
         }
-        System.out.println("Wylosowano " + numbers.size() + " liczb. Suma = " + sum);
+        System.out.println("Drawn " + numbers.size() + " Number. Sum = " + sum);
     }
 
     public int getMax() {
@@ -39,7 +39,7 @@ public class RandomNumbers {
         RandomNumbers rn = new RandomNumbers();
         rn.generateNumbers();
 
-        System.out.println("Najwieksza wylosowana liczba: " + rn.getMax());
-        System.out.println("Najmniejsza wylosowana liczba: " + rn.getMin());
+        System.out.println("The highest number drawn: " + rn.getMax());
+        System.out.println("The smallest number drawn: " + rn.getMin());
     }
 }
