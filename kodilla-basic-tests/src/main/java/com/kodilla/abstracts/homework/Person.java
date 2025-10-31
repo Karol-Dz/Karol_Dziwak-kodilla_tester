@@ -12,7 +12,7 @@ public class Person {
     }
 
     public void showJobResponsibilities() {
-        System.out.println(firstName + " (" + age + " age) work as:" + job);
+        System.out.println(firstName + " (" + age + " age) work as: " + job);
         job.showResponsibilities();
         System.out.println("Salary: " + job.getSalary() + " PLN");
     }

@@ -10,4 +10,8 @@ public class Teacher extends Job {
     public void showResponsibilities() {
         System.out.println("Teacher responsibilities: " + getResponsibilities());
     }
+    @Override
+    public String toString () {
+        return "teacher";
+    }
 }

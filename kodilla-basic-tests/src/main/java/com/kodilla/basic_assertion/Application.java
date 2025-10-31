@@ -15,14 +15,14 @@ package com.kodilla.basic_assertion;
             } else {
                 System.out.println("Metoda sum nie działa poprawnie dla liczb " + a + " i " + b);
             }
-            boolean corect = ResultChecker.assertEquals(-3, subtractResult);
-            if (corect) {
+            correct = ResultChecker.assertEquals(-3, subtractResult);
+            if (correct) {
                 System.out.println("Metoda subtract działa poprawnie dla liczb " + a + " i " +b);
             } else {
                 System.out.println("Metoda subtract nie działa poprawnie dla liczb " + a + " i " +b);
             }
-            boolean correctly = ResultChecker.assertEquals(25, squareResult);
-            if (correctly) {
+            correct = ResultChecker.assertEquals(25, squareResult);
+            if (correct) {
                 System.out.println("Metoda square działa poprawnie dla liczby " + a);
             } else {
                 System.out.println("Metoda square nie działa poprawnie dla liczby " + a);
