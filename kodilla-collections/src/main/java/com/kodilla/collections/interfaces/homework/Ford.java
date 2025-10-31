@@ -1,6 +1,6 @@
-package com.kodilla.collections.interfaces;
+package com.kodilla.collections.interfaces.homework;
 
-public class Opel implements Car {
+public class Ford implements Car {
     private int speed;
 
     @Override
@@ -10,17 +10,17 @@ public class Opel implements Car {
 
     @Override
     public void increaseSpeed() {
-        speed += 25;
+        speed += 30;
 
     }
 
     @Override
     public void decreaseSpeed() {
-        speed -= 10;
+        speed -= 15;
         if (speed < 0) speed = 0;
     }
     @Override
     public String toString() {
-        return "Opel";
+        return "Ford";
     }
 }
