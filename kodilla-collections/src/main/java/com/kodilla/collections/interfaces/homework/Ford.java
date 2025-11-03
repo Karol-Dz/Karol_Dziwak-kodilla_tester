@@ -23,4 +23,16 @@ public class Ford implements Car {
     public String toString() {
         return "Ford";
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Ford)) return false;
+        Ford ford = (Ford) o;
+        return speed == ford.speed;
+    }
+    @Override
+    public int hashCode() {
+        return Integer.hashCode(speed);
+    }
 }
