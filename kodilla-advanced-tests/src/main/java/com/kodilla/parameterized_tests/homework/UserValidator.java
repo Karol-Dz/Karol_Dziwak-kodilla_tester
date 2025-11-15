@@ -9,7 +9,8 @@ public class UserValidator {
     }
     public boolean validateEmail(String email) {
         if (null != email) {
-            String regex = "^([_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{1,6}))?$";
+            String regex = ("^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,6}$");
+
             Pattern pattern = Pattern.compile(regex);
             Matcher matcher = pattern.matcher(email);
             return matcher.matches();

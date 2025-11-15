@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class GamblingMachineCsvTest {
+class GamblingMachineTestSuite {
 
     private GamblingMachine machine = new GamblingMachine();
 
@@ -29,7 +29,7 @@ class GamblingMachineCsvTest {
     }
 
     private Set<Integer> parseCsvLineToSet(String line) {
-        return Arrays.stream(line.split(","))
+        return Arrays.stream(line.split(";"))
                 .map(String::trim)
                 .map(Integer::parseInt)
                 .collect(Collectors.toSet());

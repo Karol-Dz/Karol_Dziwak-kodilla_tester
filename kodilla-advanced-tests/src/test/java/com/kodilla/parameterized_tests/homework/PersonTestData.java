@@ -6,10 +6,10 @@ import java.util.stream.Stream;
 
 public class PersonTestData {
 
-    public static Stream<Arguments> providePersonData() {
+    static Stream<Arguments> providePersonData() {
         return Stream.of(
-                Arguments.of(new Person(1.75, 40), "Underweight"),
-                Arguments.of(new Person(1.70, 45), "Very severely underweight"),
+                Arguments.of(new Person(1.75, 40), "Very severely underweight"), // 13,06
+                Arguments.of(new Person(1.70, 45), "Severely underweight"), // 15,57
                 Arguments.of(new Person(1.80, 60), "Normal (healthy weight)"),
                 Arguments.of(new Person(1.65, 70), "Overweight"),
                 Arguments.of(new Person(1.60, 95), "Obese Class II (Severely obese)"),
