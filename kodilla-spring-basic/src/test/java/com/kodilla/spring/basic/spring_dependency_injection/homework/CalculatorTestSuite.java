@@ -2,19 +2,22 @@ package com.kodilla.spring.basic.spring_dependency_injection.homework;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+@SpringBootTest(classes = {Calculator.class, Display.class})
 class CalculatorTestSuite {
+
+    @Autowired
+    private Calculator bean;
 
     @Test
     void shouldPerformOperationsCorrectly() {
-        ApplicationContext context = new AnnotationConfigApplicationContext(
-                "com.kodilla.spring.basic.spring_dependency_injection.homework"
-        );
-
-        Calculator bean = context.getBean(Calculator.class);
+//        ApplicationContext context = new AnnotationConfigApplicationContext(
+//                "com.kodilla.spring.basic.spring_dependency_injection.homework"
+//        );
+//
+//        Calculator bean = context.getBean(Calculator.class);
 
         double addResult = bean.add(5, 3);
         Assertions.assertEquals(8, addResult, 0.0001);
