@@ -15,12 +15,12 @@ public class BadCodeExample {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true; // te same obiekty
-        if (o == null || getClass() != o.getClass()) return false; // null lub inna klasa
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
         BadCodeExample that = (BadCodeExample) o;
 
-        return Objects.equals(type, that.type); // bezpieczne porównanie typu
+        return Objects.equals(type, that.type);
     }
 
     @Override
